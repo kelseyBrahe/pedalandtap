@@ -1,0 +1,217 @@
+
+.container {
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#svg8 {
+    stroke: white;
+    text-shadow: 2px 2px 4px rgba(61, 60, 60, 0.8);
+    display: inline-block;
+	top: 0;
+    left: 0;
+    align-content: center;
+}
+
+#outermost {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    padding: 0;
+}
+
+#header-segment {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+    position: relative;
+    z-index: 0;
+}
+
+.overlay {
+    background-color: rgb(0, 0, 0);
+    opacity: 45%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+
+.header-img {
+    background-image: url('../../assets/images/landing.jpg');
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    z-index: 0;
+}
+
+.above {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#header {
+    max-width: 100%;
+    width: 100vw;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    opacity: 100%;
+}
+
+#down {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    z-index:3;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+}
+
+#chevron {
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 3;
+    cursor: pointer;
+    transition: ease-in-out;
+}
+
+#img1 {
+    background-image: url('../../assets/images/mucky.jpg');
+}
+
+#img2 {
+    background-image: url('../../assets/images/bartender.jpg');
+}
+
+#img3 {
+    background-image: url('../../assets/images/patio.jpg');
+}
+
+div.col-12 {
+    padding: 0;
+    max-width: 100%;
+    height: fit-content;
+}
+
+.row {
+    max-width: 100%;
+    width: 100vw;
+    height: 100%;
+    margin: 0; 
+}
+
+.first {  
+    height: 100vh;
+    padding: 0;
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+}
+
+.second {
+    height: 100vh;
+}
+
+.gridImg {
+    width: 100vw;
+    height: 100%; 
+}
+
+.txt {
+    border: none;
+    background: none;
+}
+
+.card-body {
+    padding: 5em;
+    padding-top: 45%;
+    text-shadow: 1px 1px 1px #FFFFF4;
+
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.btn {
+    font-weight: 300;
+    background-color: black;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.textSq {
+    background-color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.landingLinks {
+    color: #fcf8f3;
+}
+
+.landingLinks:hover {
+    text-decoration: none;
+    color: #fcf8f3;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+/* media options */
+
+@media (max-width: 1200px) {
+    #header-segment {
+        height: 100vh;
+        max-height: 100%;
+    }
+
+    .imageSq {
+        height: 70vh;
+        width: 100vw;
+    }
+
+    .textSq {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .card-body {
+        padding-top: 20%;
+        font-size: 0.7rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}

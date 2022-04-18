@@ -1,0 +1,38 @@
+<!-- navbar -->
+<div class="menu-wrap">
+    <input type="checkbox" class="toggler" id="menu-checkbox" (click)="revertColors()">
+    <div class="hamburger"><div id="menu-toggler"></div></div>
+      <div class="menu">
+        <div>
+            <div>
+                <ul>
+                    <li><a (click)="goToLink('landing')">Home</a></li>
+                    <li><a (click)="goToLink('menu')">Menu</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
+
+<div class="footer changeToggler" togglerColor="black">
+    <div class="row">
+        <div class="col-12 col-xl-3 column left">
+            <h4>Contact</h4>
+            <p>215 Spokane Street, Kimberley, BC | Canada</p>
+            <p>(250) 427-3325</p>
+        </div>
+        <div class="col-12 col-xl-6 column center">
+            <h3>GET MUCKED UP</h3>
+            <p class="corp">Pedal & Tap is a part of the Hairy Bear Management Restaurant Group.</p>
+        </div>
+        <div class="col-12 col-xl-3 column right">
+            <h4>Hours</h4>
+            <p>OPEN DAILY | 4pm - 9pm</p>
+        </div>
+    </div>
+</div>

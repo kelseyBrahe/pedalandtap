@@ -1,0 +1,74 @@
+<div class="container" id="menuStart">
+    <div class="row changeToggler" togglerColor="white">
+        <div class="overlay"></div>
+        <div class="col-12 image-div"></div>
+        <div class="title"><h1>MENU</h1></div>
+    </div>
+
+    <div class="row parentRow changeToggler" togglerColor="black">
+        <div class="navigation col-12">
+            <a (click)="showContent('starters')">STARTERS</a>
+            <a (click)="showContent('salads')">SALADS</a>
+            <a (click)="showContent('pasta')">PASTA</a>
+            <a (click)="showContent('burgers')">BURGERS & SANDWICHES</a>
+            <a (click)="showContent('mains')">MAINS</a>
+            <a (click)="showContent('kids')">KIDS</a>
+            <a (click)="showContent('wine')">WINE</a>
+            <a (click)="showContent('beer')">BEER & CIDER</a>
+            <a (click)="showContent('cocktails')">COCKTAILS</a>
+            <a (click)="showContent('whisky')">WHISKY</a>
+        </div>
+
+        <div class="filters">
+            <button id="gf" (click)="filter('gf')" class="filterButton">Gluten Free</button>
+            <button id="df" (click)="filter('df')" class="filterButton">Dairy Free</button>
+            <button id="v" (click)="filter('v')" class="filterButton">Vegetarian</button>
+            <button id="vg" (click)="filter('vg')" class="filterButton">Vegan</button>
+        </div>
+
+        <div class="menuContent col-12">
+                <div class="menuCont">
+                    <h1 class="menuHeader">{{menuTitle}}</h1>
+
+                    <p class="burgDesc" *ngIf="menuTitle == 'BURGERS & SANDWICHES'">
+                        All burgers come with fries, salad, or a bit of both. Muck up your fries for $5. Add to Burgers: <b>Sauteéd Mushrooms 1.50</b> • <b>Extra Patty 4.50</b> • <b>sunny-side-up egg 2.50</b> • <b>Bacon 3.00</b> • <b>Mushroom Gravy 2.50</b>
+                    </p>
+
+                    <div class="menuContainer" *ngFor="let item of CONTENT">
+                        <!-- food -->
+                        <ng-container *ngIf="menuType(item) === 'food'">
+                            <div id="{{item.id}}" class="foodItems card" 
+                            [ngClass]="{
+                                gf: item.gf || item.gfo, 
+                                df: item.df || item.dfo, 
+                                v: item.v || item.vo, 
+                                vg: item.vg || item.vgo
+                            }">
+                                <h4 class="itemName">{{item.name}}</h4>
+                                <h5>{{item.price}}</h5>
+                                <h6 class="desc">{{item.description}}</h6>
+                                <div class="stickers">
+                                    <div class="sticker" *ngIf="item.gf"><h6>Gluten Free</h6></div>
+                                    <div class="sticker" *ngIf="item.gfo"><h6>GF Option</h6></div>
+                                    <div class="sticker" *ngIf="item.df"><h6>Dairy Free</h6></div>
+                                    <div class="sticker" *ngIf="item.dfo"><h6>DF Option</h6></div>
+                                    <div class="sticker" *ngIf="item.v"><h6>Vegetarian</h6></div>
+                                    <div class="sticker" *ngIf="item.vo"><h6>V Option</h6></div>
+                                    <div class="sticker" *ngIf="item.vg"><h6>Vegan</h6></div>
+                                    <div class="sticker" *ngIf="item.vgo"><h6>Vg Option</h6></div>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <!-- drinks -->
+                        <ng-container *ngIf="menuType(item) === 'drinks'">
+                            <div class="card">
+                                <h4 class="itemName">{{item.brand}}</h4>
+                                <h5>{{item.name}}</h5>
+                                <h6>{{item.price}}</h6>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

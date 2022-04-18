@@ -1,0 +1,64 @@
+<div class="container-fluid showcase changeToggler" togglerColor="white" id="outermost">
+    <div id="header-segment" class="header-img">
+        <div class="overlay">
+        </div>
+        <div class="above">
+            <div id="header"></div>
+            <div class="col-12" id="down">
+                <a (click)="onClick('gridMenu')" (mouseenter)="mouseEnter()">
+                    <svg id="chevron" class="bi bi-chevron-compact-down" width="5em" height="5em" viewBox="0 0 18 16" fill="white" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 01.67-.223L8 9.44l5.776-2.888a.5.5 0 11.448.894l-6 3a.5.5 0 01-.448 0l-6-3a.5.5 0 01-.223-.67z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+       
+       <!-- grid of info / images -->
+    <div class="row changeToggler" togglerColor="black" id="gridMenu">
+        <div class="col-xl-6 col-lg-12  second textSq order-1 order-xl-2 changeToggler" togglerColor="black">
+            <div class="card text-center txt">
+                <div class="card-body">
+                    <h5 class="card-title">See our range of delicious meals</h5>
+                    <p class="card-text">
+                        With gluten-free, vegan and vegetarian options, we have something for everyone. Made with local ingredients and paired with local beer and wine.
+                    </p>
+                    <button type="button" class="btn btn-dark" (click)="goToLink('menu')">See our menu</button>
+                </div> <!-- end div card body -->
+            </div> <!-- end div card -->
+        </div> <!-- end div outer cols -->
+        <div class="col-xl-6 col-lg-auto first imageSq order-2 order-xl-1 changeToggler" togglerColor="white" id="img1"></div>
+    </div> <!-- second row ends -->
+
+    <!-- second grid row -->
+    <div class="row changeToggler" togglerColor="black" id="gridAbout">
+        <div class="col-xl-6 col-lg-auto order-2 order-xl-1 first imageSq changeToggler" togglerColor="white" id="img2"></div>
+        <div class="col-xl-6 col-lg-12 second textSq changeToggler" togglerColor="black">
+            <div class="card text-center txt">
+                <div class="card-body">
+                    <h5 class="card-title">Get to know us a little better</h5>
+                    <p class="card-text">
+                        We love Kimberley, and we love our local businesses. Come in to sample farm-fresh local produce, or locally sourced beer and wine. Pedal and Tap was started a few years ago with the hope of bringing the community together, and we can't wait to welcome you.
+                    </p>
+                    <button type="button" class="btn btn-dark">Read More</button>
+                </div> <!-- end div card body -->
+            </div> <!-- end div card -->
+        </div> <!-- end div outer cols -->
+    </div> <!-- second row ends -->
+
+    <!-- third grid row -->
+    <div class="row changeToggler" togglerColor="white" id="gridContact">
+        <div class="col-xl-6 col-lg-12  second textSq order-1 order-xl-2 changeToggler" togglerColor="black">
+            <div class="card text-center txt">
+                <div class="card-body">
+                    <h5 class="card-title">Get in touch</h5>
+                    <p class="card-text">
+                        Get social with us, or just come on in to say hello. We can't wait to see you.
+                    </p>
+                    <button type="button" class="btn btn-dark">Contact us</button>
+                </div> <!-- end div card body -->
+            </div> <!-- end div card -->
+        </div> <!-- end div outer cols -->
+        <div class="col-xl-6 col-lg-auto order-2 order-xl-1 first imageSq changeToggler" togglerColor="white" id="img3"></div>
+    </div> <!-- second row ends -->
+</div> <!-- container ends -->
